@@ -1,0 +1,35 @@
+/*x=10; //global variable
+console.log(x);
+let y=5;
+const z=12;
+var w=15;
+{
+    var y1=6;
+    const y2=17;
+    console.log("var inside block scope:",y1);
+    console.log("const outside block scope:",y2);
+
+}
+
+function sayHi(){
+    for(let i=0;i<x;i++) console.log("HI",i);
+}
+sayHi();
+
+//nested scopes
+function nestedScopes(){
+    let value = 145;
+    for(let i=0;i<5;i++){
+        if(i%2==0){
+            let value2=35;
+            console.log(value, value2);
+        }
+    }
+}*/
+
+let arr=[1,[1,2,3],4,5,[6,95,71],80];
+for(let i=0;i<i.length;i++){
+    for(let j=0;j<3;j++){
+        console.log(arr[i][j]);
+    }
+}
