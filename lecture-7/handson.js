@@ -113,9 +113,10 @@ return res;
  console.log(product(a2));
  //Q:-Maximum sum subarray of size K (fixed size).
  function maxSumSizek(arr,k){
-    //let res=[];
-    let max=arr[0];
-    for(let i=0;i<arr.length-k;i++){
+    //let res=[];                  2 3 4 5 6 7 8     k=3
+    let max=arr[0];                          //i=1 j=1 j<1+2=3
+
+    for(let i=0;i<=arr.length-k;i++){
         let sum=0;
         for(let j=i;j<i+k;j++){
             sum+=arr[j];

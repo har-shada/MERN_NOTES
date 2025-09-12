@@ -75,6 +75,22 @@ console.log(nextAr);
 let firstAr=[20,30,50,60];
 firstAr.unshift(70);
 console.log(firstAr);
+
+
 //Q:-rotate element right by one elemeent
+
+
 let Array=[2,30,4,50];
+//
+let array1=[10,20,30,40];
+let result1=[];
+array.pop();
+//array.unshift(40);
+result.unshift(40);
+let add1=result.concat(array1);
+
+console.log(add);
+
+
+
 

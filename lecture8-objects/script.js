@@ -181,7 +181,8 @@ carObj.running();*/
                 allSkills+= skill+",";
                 console.log(allSkills);
         },
-            addSkill: function addSkill(skillName){
+            addSkill: function addSkill(skill){ // we can also write addSkill: function (skill) it is
+                                                 //  anonymous function
                 
                 this.skills.push(skill);
 
@@ -190,4 +191,8 @@ carObj.running();*/
        portfolio.showSkill();
        portfolio.addSkill("React");
        portfolio.showSkill();
-    
+    /* open ypur MERN folder in integrated terminal
+    -in terminal,
+     -git add .,
+     -git commit -m "[message about this lecture]",
+     -git puh origin main*/
