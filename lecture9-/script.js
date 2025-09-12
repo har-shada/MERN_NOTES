@@ -61,7 +61,7 @@ console.log(str.substring(3));//gives substring starting from index=3 to till en
 console.log(str.substring("3"));//gives substring starting from index=3 to till end
 console.log(str.substring(-3)); //substring consider negative number as a zero it starts 
                                //from zero to till end
-console.log(str.sunstring(-3,-10));// gives emppty string
+console.log(str.substring(-3,-10));// gives emppty string
 console.log(str.substring(-3,1000));// behaves as (0 to n)
 
 //slice()-> almost same as substring , but changes (-)ves  handle diffrently
@@ -88,7 +88,7 @@ const string = "Harshada";
 const number = 67;
 const bool= true;
 const object={
-    name :"Harshada";
+    name :"Harshada",
 
 };
 console.log(string.__proto__);

@@ -45,4 +45,14 @@ for(let i=0;i<n;i++){
     sum1+=arr[i][n-i-1];
     
 }
+function rotateByk(arr7,k){
+    for(let i=0;i<k;i++){
+        arr7.shift();
+        arr7.push()
+        
+
+
+    }
+}
+
 
