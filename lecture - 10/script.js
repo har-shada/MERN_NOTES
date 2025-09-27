@@ -131,10 +131,11 @@ function revserString(str){
 const str="Hello world ";
 console.log(revserString(str));
 
+//palindrome check
 function isPalindrome(str){
 
     let n= str.length;
-    for(let i=0;i<Math.floor(n/2);i++){
+    for(let i=0;i<Math.floor(n/2);i++){ //n=4 helo 
         if(str[i]!=str[n-i-1])
             return false;
     }
@@ -142,6 +143,7 @@ function isPalindrome(str){
 }
 const str2="Hello world ";
 console.log(isPalindrome(str2));
+//find number of words in a string
 
 function numberOfWords(str){
     return str.trim().split(" ").length;

@@ -70,7 +70,7 @@ console.log(wordsFreq);
 //when twos have exact same letters but order may change
 //e.g mad- dam
 //listen-silent
-//applee-aplee(not freq isnot  same when thought letters are same)
+//applee-aplee(not freq is not  same when thought letters are same)
 let a="silent" ,  b=" listen";
 // create a map of silent, then traverse in listen  and start decrementing the freq of each element
 //if it exists in map

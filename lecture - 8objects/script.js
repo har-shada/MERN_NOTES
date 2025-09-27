@@ -2,7 +2,7 @@
 /*const name="piyush";
 const age=20;
 const address="pune";
-const standard=12;
+const standard=12;*/
 
 const studentObj={
     name: "piyush",
@@ -10,9 +10,9 @@ const studentObj={
     address:"pune",
     standard:12
 };
-*/
+
 /*create varibale to store name ,age,address of parents*/
-/*const parentObj={
+const parentObj={
     name:"Riya",
     age:35,
     address:"pune"
@@ -21,7 +21,7 @@ const studentObj={
 console.log("Student's name",studentObj.name);
 console.log("students name",studentObj["name"]);
 const studentNameProperty="name";
-console.log("students name",studentObj[studentNameProperty]);
+console.log("students nameeeeee",studentObj[studentNameProperty]);
 
 //Updating a value of an object
 studentObj.name="Prateek";
@@ -65,7 +65,7 @@ const employeeObj={
     }
 }
 console.log("City of", employeeObj.name,"is", employeeObj.address.city);
-*/
+
 //Array of Objects
 
 /*const studentObjArr=[
