@@ -1,5 +1,3 @@
-/* Practice Question */
-/* Cricket Team */
 const team = {
   name: "Indian Cricket Team",
   /* this will store an object with two properties -> {id: 1, scores: [10, 34, 80]} */

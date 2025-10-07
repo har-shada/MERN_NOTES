@@ -1,93 +1,111 @@
-/*const isDivisibleBy3= (num)=>{
-    if(num%3==0) return true;
-    else return false;
-}*/
-const isDivisibleBy3=(num)=>!(num%3);
-console.log(isDivisibleBy3(6));
-//arrow funmction is not  hoisted 
-// NOTE: Arrow function do not have thier own this keywod are they uses parents  this
-const  student={
-    fullname: "harshda pohane",
-    age:2,
-    result1:function (resultStatus){
-        console.log(this.fullname+ "has"+resultStatus+ " the  exam");
-        console.log(this);//show the  object properties
-    },
-    result2: (resultStatus)=>{
-        console.log(this.fullname  + "has"+ resultStatus + "the exam");
-        console.log(this)//does not show the property of object
+/* 
+given an array, place its last element at a position 
+such that all smaller or equal elements are in left and all greater elements are in right 
+input: [2, 7, 1, 5, 4]
+
+output: [1, 2, 4, 7, 5] (if there are multiple answers, print any of them)
+
+NOTE: try to implement this in O(N) time
+NOTE: then try to implement this in O(1) space also
+*/
+
+/* Try brute force first */
+
+/* Optimized approach using O(N) time and O(1) space */
+function placeLastElem(arr) {
+  let n = arr.length;
+  let lastElem = arr[n - 1];
+  let ind = 0; //index that's available to place elements <= lastElem
+
+  for (let i = 0; i < n; i++) {
+    if (arr[i] <= lastElem) {
+      [arr[i], arr[ind]] = [arr[ind], arr[i]];
+      ind++;
     }
+  }
 
-};
-student.result1("passed");
-student.result2("failed");
-////===========anonymous function=============
-/* basically a function with no name*/
+  return arr;
+}
 
-/*=======higher order functions(Hofs)=========*/
-//these functions are either function  that takes  functions  as  a arguemtn or return a function
+let arr = [2, 7, 6, 5, 4, 4];
+console.log(placeLastElem(arr));
 
-//types of higher order function
-//1.forEach
-//- applies the callback function on each element
-//- iterates over  each eleemnt and doesnt  brreak like   other for loops
-//doesnt change the original arraay
-//e.g
-let arr= [2,1,6,3,9];
+/* =============== Quick sort =============== */
+// quick sort is a divide and conqur  sorting algorithm 
+//consider pivot element all less eelement than pivot element are on left and greater eleement are on right
+//pivot element can be a random element e.g. it can  be  first , middle , last 
+
+function quickSort(arr, low, high) {
+
+
+}
+
+arr = [3, 1, 6, 2, 8, 7, 4];
 console.log(
-    arr.forEach((value,index,array)=>{
-    value *= 2;
-    array[index]= value;
-    console.log(value,index,array);
-})
+  "Sorted using quick sort: " + quickSort(arr, 0, arr.length - 1).join(" ")
 );
-console.log({arr});
+ 
 
 
 
-let users = [
-    {name: "Ramesh", age: 20},
-    {name:"Suresh",age: 10},
-    {name: " Rani", age:40},
+
+
+
+/* sort() method in JS */
+
+arr = [3, 1, 6, 2, 8, 7, 4];
+// arr.sort(); //sorts in ascending order
+// arr.sort().reverse(); // sorts in descending order
+
+//also sorts in ascending order
+arr.sort((a, b) => a - b);
+// console.log({ arr });
+
+//also sorts in descending order
+arr.sort((a, b) => b - a);
+console.log({ arr });
+
+arr = ["apple", "watermelon", "kiwi"];
+arr.sort();
+console.log(arr);
+
+//H.W. explore localeCompare() method for strings comparison
+
+let students = [
+  { name: "Kiran", age: 20, rollNum: 10 },
+  {
+    name: "Ramesh",
+    age: 20,
+    rollNum: 7,
+  },
+  { name: "Suresh", age: 24, rollNum: 12 },
 ];
-//print name and age  of users array using  forEach\
-users.forEach((value)=>{
-    console.log(value.name  + " is "+ value.age);
+
+students.sort((a, b) => {
+  if (a.age == b.age) return b.rollNum - a.rollNum;
+  return a.age - b.age;
 });
+console.log(students);
 
-/*map()
-//- transform the array
-//-returns an array
-//-does not chnage the original array*/
-
-arr=[2,4,3,5];
-let squaredArr= arr.map((value,index,array)=>{;
-return value*value;
-});
-console.log({squaredArr});
-
-users = [
-    {name:"ramesh", age:20},
-    {name:"suresh",age:20},
-    {name:"Rani", age:40},
+const nestedArr = [
+  [1, 3],
+  [2, 1],
+  [1, 2],
+  [2, 4],
 ];
-//transform the name of each user  to uppercase
 
-const updatedUsers = users.map((value) => {
-return {name : value.name.toUpperCase(),age: value.age};
-});
+nestedArr.sort((a, b) => a[0] - b[0]);
+console.log({ nestedArr });
 
-console.log(updatedUsers);
-console.log({users});
-/*map()
-//- keeps the elements that passes the condition 
-//-returns an array
-//-does not chnage the original array
-// -num.filter((value,index,array)=> condition)
-// */
-let nums = [2,12,9,18,27];
-const oddNums= nums.filter((value,index,array)=>value%2);
-console.log({oddNums});
+/* H.w: sort the above array according to first value and then according to second value 
+output should be: 
+[
+  [1, 2],
+  [1, 3],
+  [2, 1],
+  [2, 4],
+]
+*/
 
 //hw
 let names =["pranjal", "Bavesh","Uday","siddhart",  "neha"];

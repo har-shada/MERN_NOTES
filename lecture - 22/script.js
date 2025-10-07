@@ -30,6 +30,8 @@ const team = {
 
   averageScore: function (id) {
     /* find the player with this id and calculate its avg score and return it*/
+    
+
   },
 
   teamAverage: function () {

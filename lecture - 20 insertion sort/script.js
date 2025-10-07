@@ -1,26 +1,51 @@
-function insertionSort(arr){
-    let n= arr.length;
-    let ind =0;
-    for(let i=1; i<n;i++) {
-         let firstEleOfUnsortedPart = arr[i];
-         let indexToInsertAt = 0;
-         for(let j=ind; j >=0;j--){
-            if(arr[j] > firstEleOfUnsortedPart){
-                arr[j+1]= arr[j];
-            
-            }else {
-                indexToInsertAt =j+1;
-                break;
-            }
-         }
-         arr[indexToInsertAt] = firstEleOfUnsortedPart;
-         ind++;
+function insertInSortedArray(arr) {
+  let n = arr.length;
+  let lastElem = arr[n - 1];
+  let indexToInsertAt = 0;
+  for (let i = n - 2; i >= 0; i--) {
+    if (arr[i] > lastElem) {
+      arr[i + 1] = arr[i];
+    } else {
+      indexToInsertAt = j + 1;
+      break;
     }
-    return arr;
-
+  }
+  arr[indexToInsertAt] = lastElem;
+  return arr;
 }
-let arr= [3,1,6,2,8,7,4]
-console.log("Sorted Array using insertion sort",insertionSort(arr));
+
+arr = [3, 4, 7, 9, 2];
+
+console.log(insertInSortedArray(arr));
+
+function insertionSort(arr) {
+  let n = arr.length;
+  let ind = 0;
+
+  //this loop goes over all elements from unsorted part of array
+  // to be inserted in sorted part of the array
+  for (let i = 1; i < n; i++) {
+    let firstElemOfUnsortedPart = arr[i];
+    let indexToInsertAt = 0;
+    for (let j = ind; j >= 0; j--) {
+      if (arr[j] > firstElemOfUnsortedPart) {
+        arr[j + 1] = arr[j];
+      } else {
+        indexToInsertAt = j + 1;
+        break;
+      }
+    }
+    arr[indexToInsertAt] = firstElemOfUnsortedPart;
+    ind++;
+  }
+
+  return arr;
+}
+
+arr = [3, 1, 6, 2, 8, 7, 4];
+console.log(
+  "sorted array using insertion sort: " + insertionSort(arr).join(" ")
+);
 
 /// QUICK SORT raw 
 //GIVEN an array ,place its last element at aposition  such that  all smaller or equal  elements 
@@ -41,30 +66,3 @@ return arr2;
 }
 let ar=[2,1,7,5,4];
 console.log(sort(ar))
-//QUICK SORT=======================
-//in quick sort consier last element as pivot element 
-//e.g[3,1,6,2,8,7,4]=>4 is pivot elemeent put the pic=vot element to its place such that 
-// all elements smaller goes to left and greater element goes to right
- 
-
-//sort () mehtod in js=========================
-//eg
-let a=[2,1,7,5,4];
-a.sort();//ascending order
-console.log({a});
-
-a.sort().reverse();
-console.log({a});
-
-
-function insertionSort(arr){
-    let n= arr.length;
-    for(let i=1;i<n;i++){
-        let firstEleOfUnsortedPart = arr[i];
-        for(let j=i-1;j>=0;j--){
-            if(arr[j]> firstEleOfUnsortedPart){
-                arr[j+1]= arr[j];
-            }
-        }
-    }
-}

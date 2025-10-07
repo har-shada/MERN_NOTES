@@ -34,6 +34,7 @@ let arr1=[1,3,4,7,10];
 let arr2=[2,9,12];
 console.log(mergeSortedAr(arr1,arr2).join(" "));
 //method 2
+/*
 function mergeSortedAr2(arrr,arrr1){
     let n1= arrr.length;
     let m1=arrr1.length;
@@ -68,7 +69,7 @@ let arrr=[1,3,4,7,10];
 let arrr1=[2,9,12];
 console.log(mergeSortedAr2(arrr,arrr1).join(" "));
 
-
+*/
  
 
 // All arrays that has length 1 are sorted 
