@@ -1,0 +1,47 @@
+/*universal selector: changes the  the properties of each element */
+*{
+    color:green;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*syntax
+selector{
+propety:value
+}*/
+/*element selecotr: tag name*/
+h1{
+    /*color is applied using rgb*/
+    color:rgb(12,200,255);
+}
+#p1{         /*-id is use using # before the element*/
+    /*color is applied using rgba
+    setting the  transperency also*/
+    color: rgba(171,61,81,0.6);
+    font-size: 20px;
+    font-weight:bold;
+    text-align:justify;/*left,right,center,justify*/
+    text-decoration:underline ;/*underlinne,overline,line-through*/
+    line-height:20px;
+
+}
+h2{
+    /*color is applied using hex code,which is rrggbb*/
+    color:#942d2d;
+}
+a{
+    /*text-decoration none is helping to remove the under line  from anchor tag*/
+    text-decoration: none;
+    text-transform: capitalize;/*capitalize,uppercase,lowercase*/
+
+}
+/* units in css
+px-> fxed pixels
+%->percentage of parent  element
+em->relative to parents font size
+rem->relative  to roots font size
+vh/vw->relative to viewports(screen)height/width
+*/
+/* display property
+-inline only as  wide  astext length,cant set heigth & wigth*/
+/*webkit-validation-bubble-text
+-block
+-inline-nlock*/
