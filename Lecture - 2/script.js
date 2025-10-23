@@ -68,6 +68,7 @@ console.log(nCrOfAnArray(arr));
     }
     let arr=[4,8,3,5];
       console.log(calculateAverage(arr));*/
+
        
  
 
